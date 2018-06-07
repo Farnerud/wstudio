@@ -1,0 +1,18 @@
+.row {
+
+    .container {
+        max-width: 75rem;
+        margin: 0 auto;
+        @include clearfix;
+    }
+
+    .col-5 {
+        float: left;
+        width: 41.666666%;
+    }
+
+    .col-7 {
+        float: left;
+        width: 58.333333%;
+    }
+}

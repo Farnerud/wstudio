@@ -1,0 +1,17 @@
+ *,
+ *::before,
+ *::after {
+   box-sizing: inherit;
+ }
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.5;
+    color: $dark-grey-3;
+    box-sizing: border-box;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}

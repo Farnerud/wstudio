@@ -1,0 +1,21 @@
+.main-nav {
+    width: 100%;
+    text-align: right;
+
+    .nav-list {
+        list-style-type: none;
+
+        &__item {
+            display: inline;
+            margin-right: 1rem;
+        }
+
+        &__link {
+            color: $dark-grey-3;
+        }
+
+        &__link:hover {
+            text-decoration: underline;
+        }
+    }
+}
