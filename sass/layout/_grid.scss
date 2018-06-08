@@ -6,6 +6,10 @@
         @include clearfix;
     }
 
+    &--gutter {
+        padding-left: 60px;
+    }
+
     .col-5 {
         float: left;
         width: 41.666666%;

@@ -1,11 +1,44 @@
 .btn {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: $color-white;
-    border-radius: 4px;
+    border-radius: 8px;
+
+     &:focus {
+        outline: 0;
+    }
 
     &--quote {
         background-color: $dark-grey-1;
-        padding: .4rem .85rem;
+        padding: .4rem 1rem;
         margin-left: 1rem;
+        transition: all .2s ease-out;
+
+        &:hover {
+            background-color: $main-color-1;
+        }
+    }
+
+    &--main {
+        &:link,
+        &:visited {
+            background: -webkit-linear-gradient(90deg, $main-color-1, $main-color-2 50%, $main-color-3);
+            background: -moz-linear-gradient(90deg, $main-color-1, $main-color-2 50%, $main-color-3);
+            background:      linear-gradient(90deg, $main-color-1, $main-color-2 50%, $main-color-3);
+            padding: 1.06rem 3rem;
+            box-shadow: 2px 8px 30px .5px rgba($dark, .2);
+            transition: all .2s ease-out;
+            letter-spacing: 1.1px;
+        }
+
+        &:hover {
+            text-shadow: 2px 1px 2px $dark-grey-3;
+            box-shadow: 2px 8px 10px .5px rgba($dark, .2);
+        }
+
+        &:active {
+            text-shadow: 2px 1px 2px $dark-grey-3;
+            box-shadow: 2px 5px 5px .5px rgba($dark, .2);
+            transform: translateY(1px);
+        }
     }
 }

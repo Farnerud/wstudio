@@ -11,7 +11,8 @@ body {
 
 a:link,
 a:visited {
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline-block; }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -312,21 +313,57 @@ template {
 [hidden] {
   display: none; }
 
+.main-title {
+  font-family: "Open Sans", serif;
+  font-size: 3.2rem;
+  line-height: 1.1;
+  color: #444444; }
+
+.main-paragraph {
+  font-size: 1.2rem;
+  line-height: 1.4; }
+
 .pos-right {
   float: right !important; }
 
 .vertical-gutter {
   margin: 2.562rem 0 !important; }
 
+.margin-bottom-short {
+  margin-bottom: 2.18rem !important; }
+
+.margin-top-long {
+  margin-top: 6.87rem !important; }
+
 /*** Components ***/
 .btn {
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #ffffff;
-  border-radius: 4px; }
+  border-radius: 8px; }
+  .btn:focus {
+    outline: 0; }
   .btn--quote {
     background-color: #3d3d3f;
-    padding: .4rem .85rem;
-    margin-left: 1rem; }
+    padding: .4rem 1rem;
+    margin-left: 1rem;
+    transition: all .2s ease-out; }
+    .btn--quote:hover {
+      background-color: #5f539b; }
+  .btn--main:link, .btn--main:visited {
+    background: -webkit-linear-gradient(90deg, #5f539b, #5067b3 50%, #35c2cd);
+    background: -moz-linear-gradient(90deg, #5f539b, #5067b3 50%, #35c2cd);
+    background: linear-gradient(90deg, #5f539b, #5067b3 50%, #35c2cd);
+    padding: 1.06rem 3rem;
+    box-shadow: 2px 8px 30px 0.5px rgba(0, 0, 0, 0.2);
+    transition: all .2s ease-out;
+    letter-spacing: 1.1px; }
+  .btn--main:hover {
+    text-shadow: 2px 1px 2px #575759;
+    box-shadow: 2px 8px 10px 0.5px rgba(0, 0, 0, 0.2); }
+  .btn--main:active {
+    text-shadow: 2px 1px 2px #575759;
+    box-shadow: 2px 5px 5px 0.5px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px); }
 
 /*** Layout ***/
 .row .container {
@@ -336,6 +373,9 @@ template {
     content: "";
     display: table;
     clear: both; }
+
+.row--gutter {
+  padding-left: 60px; }
 
 .row .col-5 {
   float: left;
@@ -352,8 +392,33 @@ template {
     list-style-type: none; }
     .main-nav .nav-list__item {
       display: inline;
-      margin-right: 1rem; }
+      margin-right: 1rem;
+      font-size: 1.2em;
+      letter-spacing: 1.2px; }
     .main-nav .nav-list__link {
       color: #575759; }
     .main-nav .nav-list__link:hover {
       text-decoration: underline; }
+
+/*** Pages ***/
+.video-section {
+  position: relative; }
+  .video-section__paragraph {
+    top: 5px;
+    left: 60%;
+    width: 80%;
+    display: inline-block;
+    position: absolute;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.47em;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    color: #ffffff;
+    transform: translateX(-50%); }
+  .video-section__img {
+    box-shadow: -2px 5px 5px 1px rgba(0, 0, 0, 0.3); }
+  .video-section__play {
+    position: absolute;
+    top: 50%;
+    left: 50%; }
